@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043A481721C31684000661B8 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B126E21C22D410075F282 /* NetworkingRequest.swift */; };
+		043A481A21C424D8000661B8 /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A481921C424D8000661B8 /* AlbumDetailsViewController.swift */; };
 		2A3B126C21C21BDF0075F282 /* AlbumItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B126B21C21BDF0075F282 /* AlbumItemTableViewCell.swift */; };
 		2A3B127221C2D19D0075F282 /* AlbumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B127121C2D19D0075F282 /* AlbumData.swift */; };
 		2AB193A621C2087900C3D072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB193A521C2087900C3D072 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043A481921C424D8000661B8 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
 		2A3B126B21C21BDF0075F282 /* AlbumItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemTableViewCell.swift; sourceTree = "<group>"; };
 		2A3B126E21C22D410075F282 /* NetworkingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
 		2A3B127121C2D19D0075F282 /* AlbumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumData.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043A481821C42497000661B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				043A481921C424D8000661B8 /* AlbumDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		082928E861221507FDC3034E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		2AB193A421C2087900C3D072 /* iTunes Top Album */ = {
 			isa = PBXGroup;
 			children = (
+				043A481821C42497000661B8 /* Controllers */,
 				2A3B127021C2951E0075F282 /* Services */,
 				2A3B126D21C22CE70075F282 /* Models */,
 				2A3B126A21C21B8C0075F282 /* cells */,
@@ -252,6 +263,7 @@
 				2A3B126C21C21BDF0075F282 /* AlbumItemTableViewCell.swift in Sources */,
 				2AB193AE21C2087900C3D072 /* iTunes_Top_Album.xcdatamodeld in Sources */,
 				2A3B127221C2D19D0075F282 /* AlbumData.swift in Sources */,
+				043A481A21C424D8000661B8 /* AlbumDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

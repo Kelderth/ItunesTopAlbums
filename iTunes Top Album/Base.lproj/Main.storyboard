@@ -141,14 +141,59 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Album Details View Controller-->
         <scene sceneID="qMf-Pf-Wyf">
             <objects>
-                <viewController id="mRv-Ya-vVH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlbumDetails" id="mRv-Ya-vVH" customClass="AlbumDetailsViewController" customModule="iTunes_Top_Album" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3SC-Vu-KBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-Az-WzE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiT-nj-Yej">
+                                        <rect key="frame" x="67" y="46" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="qBj-N4-Mub"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w4G-rK-MZ1">
+                                <rect key="frame" x="0.0" y="294" width="375" height="77.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-Mt-xNc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                        <state key="normal" image="favorite"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TZ-oH-y0v">
+                                        <rect key="frame" x="0.0" y="33" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uch-nJ-vyg">
+                                        <rect key="frame" x="0.0" y="57" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" label="Album Details"/>
+                        <constraints>
+                            <constraint firstItem="0sg-Az-WzE" firstAttribute="top" secondItem="OCg-4d-cHg" secondAttribute="top" id="78Z-OG-Sko"/>
+                            <constraint firstItem="OCg-4d-cHg" firstAttribute="trailing" secondItem="0sg-Az-WzE" secondAttribute="trailing" id="DMi-TJ-LBe"/>
+                            <constraint firstItem="0sg-Az-WzE" firstAttribute="leading" secondItem="OCg-4d-cHg" secondAttribute="leading" id="gjM-Rw-ZFQ"/>
+                            <constraint firstItem="w4G-rK-MZ1" firstAttribute="leading" secondItem="OCg-4d-cHg" secondAttribute="leading" id="sri-Wc-AfI"/>
+                            <constraint firstItem="w4G-rK-MZ1" firstAttribute="top" secondItem="0sg-Az-WzE" secondAttribute="bottom" constant="10" id="woY-K1-o4H"/>
+                            <constraint firstItem="OCg-4d-cHg" firstAttribute="trailing" secondItem="w4G-rK-MZ1" secondAttribute="trailing" id="znU-xn-a1c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OCg-4d-cHg"/>
                     </view>
                 </viewController>
