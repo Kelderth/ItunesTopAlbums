@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2qh-CG-eyU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top Albums-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iTunes_Top_Album" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,20 +27,13 @@
                                 </items>
                             </tabBar>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yk3-H3-Ujq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="mIo-am-b9h"/>
+                                    <constraint firstAttribute="height" constant="100" id="oCR-VJ-mpW"/>
                                 </constraints>
                             </pickerView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-z4-nzF">
-                                <rect key="frame" x="0.0" y="100" width="375" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="8ZE-8B-Hp1"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VSF-Wo-zxO">
-                                <rect key="frame" x="0.0" y="156" width="375" height="462"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="398"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="2yx-O7-BVs" customClass="AlbumItemTableViewCell" customModule="iTunes_Top_Album" customModuleProvider="target">
@@ -111,33 +104,75 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-z4-nzF">
+                                <rect key="frame" x="0.0" y="164" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="egc-RN-q3N"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2di-9n-Jmx"/>
                             <constraint firstItem="DWL-ne-iZG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7fj-zC-y44"/>
-                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8tK-mp-OQe"/>
-                            <constraint firstItem="DWL-ne-iZG" firstAttribute="top" secondItem="VSF-Wo-zxO" secondAttribute="bottom" id="LAc-jt-7ek"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VSF-Wo-zxO" secondAttribute="trailing" id="NF0-Qz-1mO"/>
-                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="top" secondItem="Yk3-H3-Ujq" secondAttribute="bottom" id="TL1-7x-I4K"/>
+                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GhX-OE-nPC"/>
+                            <constraint firstItem="DWL-ne-iZG" firstAttribute="top" secondItem="VSF-Wo-zxO" secondAttribute="bottom" id="M59-9a-8tm"/>
+                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="top" secondItem="Yk3-H3-Ujq" secondAttribute="bottom" id="NRS-Hd-9Ge"/>
+                            <constraint firstItem="VSF-Wo-zxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O8e-sj-g2B"/>
+                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SyH-8N-6W2"/>
+                            <constraint firstItem="VSF-Wo-zxO" firstAttribute="top" secondItem="Mcr-z4-nzF" secondAttribute="bottom" id="UoD-6F-ScB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DWL-ne-iZG" secondAttribute="bottom" id="VRX-IA-q83"/>
                             <constraint firstItem="DWL-ne-iZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wod-Cy-OGI"/>
-                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XR1-Z9-sMy"/>
-                            <constraint firstItem="VSF-Wo-zxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aZd-9A-WG2"/>
-                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bUC-DZ-Ck4"/>
-                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lmQ-Oj-Nve"/>
-                            <constraint firstItem="VSF-Wo-zxO" firstAttribute="top" secondItem="Mcr-z4-nzF" secondAttribute="bottom" id="nUW-Vy-WSf"/>
-                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="soy-fQ-y2Q"/>
+                            <constraint firstItem="Mcr-z4-nzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cab-ki-DkT"/>
+                            <constraint firstItem="Yk3-H3-Ujq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ctl-kj-3UY"/>
+                            <constraint firstItem="VSF-Wo-zxO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uUb-DP-bLK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Top Albums" id="Qy4-io-KcX"/>
                     <connections>
                         <outlet property="pickerView" destination="Yk3-H3-Ujq" id="Pba-wt-wbC"/>
                         <outlet property="tableView" destination="VSF-Wo-zxO" id="Gih-sk-Cdr"/>
+                        <segue destination="mRv-Ya-vVH" kind="show" identifier="details" id="Sej-20-S1l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qMf-Pf-Wyf">
+            <objects>
+                <viewController id="mRv-Ya-vVH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3SC-Vu-KBd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OCg-4d-cHg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WjR-Gx-P3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sEQ-Y0-UnT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2qh-CG-eyU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vc6-wX-ues">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4JA-7g-Ghy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quB-6l-XDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="133"/>
         </scene>
     </scenes>
     <resources>
